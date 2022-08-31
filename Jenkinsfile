@@ -9,14 +9,14 @@ pipeline{
            stage('Checkout'){
 	    
                steps{
-		 echo 'cloning..'
+		 echo 'Cloning..'
                  git 'https://github.com/akshu20791/DevOpsClassCodes.git'
               }
           }
           stage('Compile'){
              
               steps{
-                  echo 'compiling..'
+                  echo 'Compiling..'
                   bat 'mvn compile'
 	      }
           }
@@ -24,7 +24,7 @@ pipeline{
 		  
               steps{
 		    
-		  echo 'codeReview'
+		  echo 'CodeReview'
                   bat 'mvn pmd:pmd'
               }
           }
